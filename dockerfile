@@ -1,4 +1,4 @@
-FROM python:3.12-slim-bookworm AS stage-1
+FROM python:3.13-slim-bookworm AS stage-1
 ARG TARGETARCH
 
 ARG HUGGINGFACE_MODEL=fish-speech-1.4
@@ -10,7 +10,7 @@ RUN set -ex \
     && pip install huggingface_hub \
     && HF_ENDPOINT=${HF_ENDPOINT} huggingface-cli download --resume-download fishaudio/${HUGGINGFACE_MODEL} --local-dir checkpoints/${HUGGINGFACE_MODEL}
 
-FROM python:3.12-slim-bookworm
+FROM python:3.13-slim-bookworm
 ARG TARGETARCH
 
 ARG DEPENDENCIES="  \
