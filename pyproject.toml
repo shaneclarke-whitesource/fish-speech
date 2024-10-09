@@ -39,7 +39,7 @@ dependencies = [
     "pydub",
     "faster_whisper",
     "modelscope==1.17.1",
-    "funasr==1.1.5",
+    "funasr==1.1.10",
     "opencc-python-reimplemented==0.1.7",
     "silero-vad",
     "ormsgpack",
