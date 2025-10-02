@@ -63,7 +63,7 @@ jobs:
           cache-to: type=inline
 
       - name: Push README to Dockerhub
-        uses: peter-evans/dockerhub-description@v4
+        uses: peter-evans/dockerhub-description@v5
         with:
           username: ${{ secrets.DOCKER_USER }}
           password: ${{ secrets.DOCKER_PAT }}
